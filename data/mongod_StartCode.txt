@@ -1,0 +1,4 @@
+ mongod --dbpath /users/Ming/Projects/IvyTech/ToDoList_FullStack/data/db
+
+#check JSON package
+https://jsonlint.com/ 
