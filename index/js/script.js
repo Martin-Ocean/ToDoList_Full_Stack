@@ -19,7 +19,7 @@ fetch('http://localhost:3000/tasks/')
 document.getElementById('addButton').addEventListener('click', () => {
     const contentDiv = document.getElementById('content');
     var itemInput = document.querySelector('input').value;
-
+    const message = "name=" + itemInput;
 
     //check for null
     if(itemInput === "") {
@@ -32,7 +32,7 @@ document.getElementById('addButton').addEventListener('click', () => {
         fetch('http://localhost:3000/tasks/', {
             method: 'POST',
             headers: {'Content-Type':'application/x-www-form-urlencoded'},
-            body:JSON.stringify({"name":"Post something"})
+            body: message
         }).then((res) => res.json())
         .then((data) => console.log(data))
         .catch((err) => console.log(err));
